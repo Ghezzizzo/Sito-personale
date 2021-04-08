@@ -29,7 +29,49 @@
     </header>
     <!-- contenuto -->
     <div class="sfondo">
-        
+        <h1 class="nome">Guido Ghezzi</h1>
+        <div class="paragrafo">
+            <h2 class="titolo">Chi sono</h2>
+            <p>
+                Laureato in scienze motorie, sono specializzato nella pratica sportiva e portato all'inisegnamento dello sport ai bambini e giovani. 
+            </p>
+        </div>
+        <div class="paragrafo">
+            <h2 class="titolo">Abilità</h2>
+            <p>
+               <ul class="elenco_skills">
+                   <li>gestione del gruppo</li>
+                   <li>capacità organizzative e relazionali</li>
+                   <li>lavoro in team</li>
+               </ul> 
+            </p>
+        </div>
+        <div class="paragrafo">
+            <h2 class="titolo">Progetti</h2>
+            <div class="contenitore_cards">
+               <ul class="elenco_progetti">
+                   <li>
+                       <div class="card">
+                           <h4 class="titolo">prova</h4>
+                           <p><i>multicolors</i></p>
+                        </div>
+                    </li>
+               </ul> 
+            </div>
+        </div>
+    </div>
+    <!-- Form -->
+    <div class="form_container">
+        <form name="invio_dati" action="URL_personalizzata" method="post">
+            <p>Nome</p>
+            <p class="space"><input name="nome" placeholder="Nome"></p>
+            <p>e-mail</p>
+            <p class="space"><input name="mail" placeholder="e-mail"></p>
+            <p class="mex">Messaggio</p>
+            <textarea name="messaggio" id="messaggio" cols="50" rows="5"></textarea>
+
+            <p><input class="button" name="invia" type="submit"></p>
+        </form>
     </div>
 </body>
 </html>
