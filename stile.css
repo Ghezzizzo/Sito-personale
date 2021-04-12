@@ -42,7 +42,7 @@ header {
 .triangolo {
   content: "";
   position: absolute;
-  bottom: 20.1%;
+  bottom: 20%;
   background-color: #f9f9f9;
   width: 100%;
   height: 25%;
@@ -58,8 +58,8 @@ header {
 .cerchio {
   width: 250px;
   height: 250px;
+  bottom: -80px;
   position: relative;
-  bottom: -15%;
   border: 12px solid #f9f9f9;
   border-radius: 50%;
   background: url(immagini/img_profile_guido.JPG) center center;
@@ -101,14 +101,14 @@ header {
 
 .nome {
   position: relative;
-  bottom: -15%;
-  font-size: 3rem;
+  bottom: -150px;
+  font-size: 4rem;
   font-family: "Lobster Two", cursive;
 }
 
 #soft_skills {
   position: relative;
-  bottom: -2%;
+  bottom: -30px;
   font-size: 1.6rem;
   font-family: "Lobster Two", cursive;
 }
@@ -149,6 +149,7 @@ header {
   padding-top: 40px;
   line-height: 1.6;
   font-size: 1.2rem;
+  width: 80%;
 }
 
 .elenco_skills {
@@ -168,41 +169,46 @@ header {
   flex-direction: row;
 }
 
-.card {
-  margin: 40px 40px 40px 40px;
-  background-color: #fff;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carta {
+  margin: 40px 0 0 0;
+  background-color: #f9f9f9;
+  height: 190px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 5px 5px 5px #c8c8c8;
 }
 
-.triangolo2 {
-  content: "";
-  position: absolute;
-  top: 158.5%;
-  background-color: #fff;
-  width: 100%;
-  height: 25%;
-  margin-bottom: -2px;
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  z-index: 0;
-}
-
-.contenitore_cards p {
+.contenitore_carte p {
   padding-top: 20px;
-  max-width: 120px;
   font-size: 0.8rem;
+  font-family: "Inter", sans-serif;
+  width: 90%;
 }
 
 .progetto {
   font-size: 1.5rem;
   max-width: 120px;
   text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.triangolo2 {
+  content: "";
+  position: absolute;
+  top: 160.5%;
+  background-color: #fff;
+  width: 100%;
+  height: 25%;
+  margin-bottom: -2px;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  z-index: 0;
 }
 
 /* Form */
@@ -235,10 +241,57 @@ input {
 
 #messaggio {
   margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 800px) {
   form {
     width: 100%;
+    padding: 40px 20px 40px 40px;
+  }
+
+  .triangolo2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .nome {
+    bottom: -200px;
+    margin-top: 5px;
+    font-size: 3rem;
+  }
+
+  #soft_skills {
+    bottom: -100px;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  header {
+    height: 70vh;
+  }
+
+  .triangolo {
+    content: "";
+    bottom: 30.1%;
+  }
+
+  .social {
+    bottom: 70%;
+  }
+
+  .nome {
+    bottom: -60px;
+    margin-top: 5px;
+  }
+
+  #soft_skills {
+    bottom: 40px;
+  }
+
+  .cerchio {
+    bottom: -10px;
   }
 }
