@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* modifiche base */
@@ -69,7 +69,7 @@ header {
 
 .social {
   position: absolute;
-  bottom: 50%;
+  bottom: 55%;
 }
 
 .social ul {
@@ -99,22 +99,33 @@ header {
   background-color: rgb(219, 106, 0);
 }
 
+.nome {
+  position: relative;
+  bottom: -15%;
+  font-size: 3rem;
+  font-family: "Lobster Two", cursive;
+}
+
+#soft_skills {
+  position: relative;
+  bottom: -2%;
+  font-size: 1.6rem;
+  font-family: "Lobster Two", cursive;
+}
+
 /* contenuto */
 
 .sfondo {
   background-color: #f9f9f9;
-  padding-top: 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/*
-.nome {
-  margin: 40px 0 40px 0;
-}
-*/
+
 .contenitore {
-  max-width: 1200px;
+  max-width: 800px;
+  height: auto;
+  padding: 150px 0 200px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,7 +136,19 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 60px;
+}
+
+.paragrafo .titolo {
+  font-size: 2.2rem;
+  font-family: "Lobster Two", cursive;
+}
+
+.paragrafo p {
+  text-align: center;
+  padding-top: 40px;
+  line-height: 1.6;
+  font-size: 1.2rem;
 }
 
 .elenco_skills {
@@ -140,19 +163,46 @@ header {
   align-items: center;
 }
 
+.elenco {
+  display: flex;
+  flex-direction: row;
+}
+
 .card {
+  margin: 40px 40px 40px 40px;
   background-color: #fff;
   height: 200px;
-  width: 120px;
-  border-radius: 10%;
+  width: 200px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   box-shadow: 5px 5px 5px #c8c8c8;
 }
 
-.card .titolo {
-  margin: 20px 0 50px 0;
+.triangolo2 {
+  content: "";
+  position: absolute;
+  top: 158.5%;
+  background-color: #fff;
+  width: 100%;
+  height: 25%;
+  margin-bottom: -2px;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  z-index: 0;
+}
+
+.contenitore_cards p {
+  padding-top: 20px;
+  max-width: 120px;
+  font-size: 0.8rem;
+}
+
+.progetto {
+  font-size: 1.5rem;
+  max-width: 120px;
+  text-align: center;
 }
 
 /* Form */
@@ -162,15 +212,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f9f9f9;
+  background-color: #fff;
   padding: 5% 0 5% 0;
 }
 
 form {
   background-color: #fff;
   padding: 40px 200px 40px 100px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px #c8c8c8;
   width: 800px;
 }
 

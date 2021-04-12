@@ -1,4 +1,4 @@
-var words = ['gestione del gruppo', 'capacità organizzative e relazionali','lavoro in team'];
+var words = ['Personal trainer', 'Football team coach','Programmer'];
 var counter = 0;
 var word = document.getElementById("soft_skills");
 setInterval(update_carousel_words, 1500);
