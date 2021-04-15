@@ -211,6 +211,16 @@ header {
   z-index: 0;
 }
 
+.carta a {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 123, 0);
+}
+
+.carta a:hover {
+  color: rgb(158, 50, 0);
+}
+
 /* Form */
 
 .form_container {
