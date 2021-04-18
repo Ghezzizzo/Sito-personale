@@ -42,7 +42,7 @@ header {
 .triangolo {
   content: "";
   position: absolute;
-  bottom: 20%;
+  bottom: 20.1%;
   background-color: #f9f9f9;
   width: 100%;
   height: 25%;
@@ -199,18 +199,6 @@ header {
   font-family: "Inter", sans-serif;
 }
 
-.triangolo2 {
-  content: "";
-  position: absolute;
-  top: 160.5%;
-  background-color: #fff;
-  width: 100%;
-  height: 25%;
-  margin-bottom: -2px;
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  z-index: 0;
-}
-
 .carta a {
   cursor: pointer;
   text-decoration: none;
@@ -260,32 +248,16 @@ input {
     width: 100%;
     padding: 40px 20px 40px 40px;
   }
-
-  .triangolo2 {
-    display: none;
-  }
 }
 
-@media only screen and (max-width: 1000px) {
-  .nome {
-    bottom: -200px;
-    margin-top: 5px;
-    font-size: 3rem;
-  }
-
-  #soft_skills {
-    bottom: -100px;
-  }
-}
-
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 700px) {
   header {
     height: 70vh;
   }
 
   .triangolo {
     content: "";
-    bottom: 30.1%;
+    bottom: 30.3%;
   }
 
   .social {
