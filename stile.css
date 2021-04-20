@@ -101,16 +101,6 @@ header {
 
 /* contenuto */
 
-.nome {
-  font-size: 4rem;
-  font-family: "Lobster Two", cursive;
-}
-
-#soft_skills {
-  font-size: 1.6rem;
-  font-family: "Lobster Two", cursive;
-}
-
 .sfondo {
   background-color: #f9f9f9;
   display: flex;
@@ -126,6 +116,25 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.contenitore_titolo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nome {
+  font-size: 4rem;
+  font-family: "Lobster Two", cursive;
+  text-align: center;
+}
+
+#soft_skills {
+  font-size: 1.6rem;
+  font-family: "Lobster Two", cursive;
+  text-align: center;
 }
 
 .paragrafo {
