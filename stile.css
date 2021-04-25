@@ -265,4 +265,8 @@ input {
   .cerchio {
     bottom: 40px;
   }
+
+  .triangolo {
+    display: none;
+  }
 }
