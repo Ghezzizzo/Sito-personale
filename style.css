@@ -199,7 +199,7 @@ header {
 form {
   background-color: #fff;
   padding: 40px 200px 40px 100px;
-  width: 800px;
+  width: 700px;
 }
 
 .space,
@@ -239,5 +239,15 @@ input {
 
   .triangle {
     display: none;
+  }
+
+  textarea {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .social ul li {
+    top: 40px;
   }
 }
