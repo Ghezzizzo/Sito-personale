@@ -12,28 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Guido Ghezzi</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/integration
-            emailjs.init('YOUR_USER_ID');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+    <script src="send_email.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -76,7 +55,7 @@
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                              <div class="card">
-                                    <a href="random-colours.html"><h4 class="project">Semaforo</h4></a>
+                                    <a target="_blank" href="random-colours.html"><h4 class="project">Semaforo</h4></a>
                                     <p class="description"><i>selettore random 4 colori</i></p>
                                 </div>
                       </div>
@@ -98,14 +77,15 @@
     <!-- Form -->
     <div class="form_container">
         <form id="contact-form">
+            <input type="hidden" name="contact_number">
             <p>Nome</p>
-            <p class="space"><input type="text" name="user_name" placeholder="Marco"></p>
+            <p class="space"><input type="text" name="from_name" placeholder="Marco" ></p>
             <p>Email</p>
-            <p class="space"><input type="email" name="user_mail" placeholder="example@gmail.com"></p>
+            <p class="space"><input type="email" name="user_email" placeholder="example@gmail.com"></p>
             <p class="mex">Messaggio</p>
-            <textarea name="message" id="message" cols="50" rows="5"></textarea>
+            <textarea name="message" cols="50" rows="5"></textarea>
 
-            <p><input class="button" type="submit" value="send"></p>
+            <input class="button" type="submit" value="Send">
         </form>
     </div>
     
