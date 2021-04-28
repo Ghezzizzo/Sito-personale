@@ -31,7 +31,7 @@ ul {
 header {
   height: 60vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(immagini/sfondo.jpg) center center;
+    url(images/sfondo.jpg) center center;
   background-size: cover;
   display: flex;
   flex-direction: column-reverse;
@@ -61,7 +61,7 @@ header {
   border-radius: 50%;
   position: relative;
   top: 50px;
-  background: url(immagini/img_profile_guido.JPG) center center;
+  background: url(images/img_profile_guido.JPG) center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
