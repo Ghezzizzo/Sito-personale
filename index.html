@@ -9,16 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stile.css">
+    <link rel="stylesheet" href="style.css">
     <title>Guido Ghezzi</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('YOUR_USER_ID');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <!-- immagine profilo -->
-        <div class="triangolo"></div>
-        <div class="cerchio_esterno">
-            <div class="cerchio"></div>
+        <div class="triangle"></div>
+        <div class="external-cicrlce">
+            <div class="circle"></div>
         </div>
         <!-- link social -->
         <div class="social">
@@ -31,36 +54,36 @@
 
     </header>
     <!-- contenuto -->
-    <div class="sfondo">
+    <div class="bg">
         
-        <div class="contenitore">
-            <div class="contenitore_titolo">
+        <div class="container">
+            <div class="container-title">
                 <p id="soft_skills">I' am</p>
-                <h1 class="nome">GUIDO GHEZZI</h1>
+                <h1 class="name">GUIDO GHEZZI</h1>
             </div>  
             
-            <div class="paragrafo">
-                <h2 class="titolo">Chi sono</h2>
+            <div class="paragraph">
+                <h2 class="title">Chi sono</h2>
                 <p>
                     Laureato in scienze motorie, sono specializzato nella pratica sportiva e portato all'insegnamento dello sport ai bambini e giovani. 
                     Recentemente mi sono interessato allo sviluppo web rimanendo affascinato dal mondo della programmazione.
                 </p>
             </div>
            
-            <div class="paragrafo">
-                <h2 class="titolo">Progetti</h2>
+            <div class="paragraph">
+                <h2 class="title">Progetti</h2>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                             <div class="carta">
-                                    <a href="random-colours.html"><h4 class="progetto">Semaforo</h4></a>
-                                    <p class="descrizione"><i>selettore random 4 colori</i></p>
+                             <div class="card">
+                                    <a href="random-colours.html"><h4 class="project">Semaforo</h4></a>
+                                    <p class="description"><i>selettore random 4 colori</i></p>
                                 </div>
                       </div>
                       <div class="carousel-item">
-                        <div class="carta">
-                            <h4 class="progetto">Work in progress</h4>
-                            <p class="descrizione"><i>progetto ancora da definire</i></p>
+                        <div class="card">
+                            <h4 class="project">Work in progress</h4>
+                            <p class="description"><i>progetto ancora da definire</i></p>
                         </div>
                       </div>
                     </div>
@@ -74,15 +97,15 @@
   
     <!-- Form -->
     <div class="form_container">
-        <form name="invio_dati" action="URL_personalizzata" method="post">
+        <form id="contact-form">
             <p>Nome</p>
-            <p class="space"><input name="nome" placeholder="Nome"></p>
-            <p>e-mail</p>
-            <p class="space"><input name="mail" placeholder="e-mail"></p>
+            <p class="space"><input type="text" name="user_name" placeholder="Marco"></p>
+            <p>Email</p>
+            <p class="space"><input type="email" name="user_mail" placeholder="example@gmail.com"></p>
             <p class="mex">Messaggio</p>
-            <textarea name="messaggio" id="messaggio" cols="50" rows="5"></textarea>
+            <textarea name="message" id="message" cols="50" rows="5"></textarea>
 
-            <p><input class="button" name="invia" type="submit"></p>
+            <p><input class="button" type="submit" value="send"></p>
         </form>
     </div>
     

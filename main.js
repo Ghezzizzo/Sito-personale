@@ -9,3 +9,4 @@ function update_carousel_words(){
         counter = 0;
     }
 };
+
