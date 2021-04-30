@@ -66,6 +66,12 @@ header {
   background-repeat: no-repeat;
 }
 
+.circle:hover {
+  background: url(images/img_profile_color.png) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .social ul {
   display: flex;
 }
@@ -121,13 +127,12 @@ header {
 
 .name {
   font-size: 4rem;
-  font-family: "Lobster Two", cursive;
   text-align: center;
+  font-weight: bold;
 }
 
 #soft_skills {
   font-size: 1.6rem;
-  font-family: "Lobster Two", cursive;
   text-align: center;
 }
 

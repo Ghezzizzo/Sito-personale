@@ -8,7 +8,7 @@ const btn = document.querySelector('button');
 let interval
 let time = 0;
 
-let colours = ['red','green','blue','yellow'];
+let colours = ['red','#00de51','blue','yellow'];
 
 btn.addEventListener('click',startTimer);
 
@@ -19,10 +19,10 @@ function startTimer() {
     } else {
         clearInterval(interval)
         btn.textContent = 'Start';
-        col1.style.backgroundColor = 'white';
-        col2.style.backgroundColor = 'white';
-        col3.style.backgroundColor = 'white';
-        col4.style.backgroundColor = 'white';
+        col1.style.backgroundColor = '';
+        col2.style.backgroundColor = '';
+        col3.style.backgroundColor = '';
+        col4.style.backgroundColor = '';
         time = 0
         document.getElementById('time').innerHTML = 0;
     }
