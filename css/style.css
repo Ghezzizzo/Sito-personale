@@ -2,13 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* modifiche base */
 
 ul {
   list-style: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .button {
@@ -31,7 +35,7 @@ ul {
 header {
   height: 60vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/sfondo.jpg) center center;
+    url(../images/sfondo.jpg) center center;
   background-size: cover;
   display: flex;
   flex-direction: column-reverse;
@@ -61,15 +65,16 @@ header {
   border-radius: 50%;
   position: relative;
   top: 50px;
-  background: url(images/img_profile_guido.JPG) center center;
+  background: url(../images/img_profile_guido.JPG) center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .circle:hover {
-  background: url(images/img_profile_color.png) center center;
+  background: url(../images/img_profile_color.png) center center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: all 0.4s ease;
 }
 
 .social ul {
@@ -140,7 +145,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 60px;
+  padding: 5rem 0;
 }
 
 .paragraph .title {
@@ -154,6 +159,10 @@ header {
   line-height: 1.6;
   font-size: 1.2rem;
   width: 80%;
+}
+
+.paragraph a {
+  margin-top: 2.5rem;
 }
 
 .carousel-item {
