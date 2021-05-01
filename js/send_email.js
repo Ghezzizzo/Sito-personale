@@ -11,6 +11,7 @@ window.onload = function() {
         emailjs.sendForm('service_blt3n1h', 'template_ertv74l', this)
             .then(function() {
                 console.log('SUCCESS!');
+                alert('inviata');
             }, function(error) {
                 console.log('FAILED...', error);
             });

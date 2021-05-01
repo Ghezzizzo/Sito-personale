@@ -10,3 +10,5 @@ function update_carousel_words(){
     }
 };
 
+
+
